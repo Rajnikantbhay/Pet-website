@@ -10,7 +10,7 @@ import { Context } from '../Context';
 export default function BottomNavigation() {
     const {handleContactUs, handleLocateUs, handleFollowUs} = useContext(Context)
   return (
-    <div className='bottom-navigation fixed bottom-0 left-0 right-0 p-2 bg-[#f0e4cc] shadow-md border border-white z-10'>
+    <div className='bottom-navigation fixed bottom-0 left-0 right-0 p-2 bg-[#f0e4cc] shadow-md border border-white z-10 '>
       <nav className='flex items-center justify-evenly'>
         <div className='flex flex-col items-center'>
           <Link to="/services">

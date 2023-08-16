@@ -12,7 +12,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css";import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Fragment } from 'react'
+import { Fragment, useContext } from 'react'
+import { Context } from '../Context'
 
 const Review = [
     {
@@ -68,6 +69,7 @@ const Review = [
 ]
 
 const ReviewSlider = () => {
+  const {isScreenSmall} = useContext(Context);
     return (
         <Swiper
           slidesPerView={1}
@@ -79,18 +81,18 @@ const ReviewSlider = () => {
               slidesPerView: 2,
             },
           }}
-          className="serviceSlider custom-swiper min-h-[740px] h-[35rem] overflow-y-auto"
+          className="serviceSlider custom-swiper min-h-[600px] h-[40rem] overflow-y-auto "
         >
           {Review.map((rev) => {
             return (
               <Fragment key={rev.id}>
                 <SwiperSlide
-                  className="border smmx border-primary/20 bg-cream min-h-[560px] py-16 px-8 rounded-[66px] mxauto"
+                  className="border smmx border-primary/20 bg-cream min-h-[560px] py-20 px-8 rounded-[66px] mxauto"
                   key={rev.id}
                 >
-                <div className='w-72 mb-4 h-1/2 mxauto'><img className="h-full  rounded-full mxauto" src={rev.img} /></div>
+                <div className='w-60 mb-4  mxauto'><img className="h-full  rounded-full mxauto" src={rev.img} /></div>
                 <hr className='border w-full border-black'/>
-                  <div className="text-[16px] mb-4 mt-4 font-[Arial]">{rev.description}</div>
+                  <div className="text-[16px] mt-4 mb-16 font-[Arial]">{rev.description}</div>
                 </SwiperSlide>
               </Fragment>
             );

@@ -27,7 +27,6 @@ export default {
           hover: '#021f2C',
         },
         cream: '#ebe3cc',
-        teal: '#189cab',
         orange: {
           DEFAULT: '#ed5c01',
           hover: '#e45a03',

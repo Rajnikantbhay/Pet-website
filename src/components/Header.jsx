@@ -9,7 +9,7 @@ const Header = () => {
   const {handleContactUs, handleLocateUs, isScreenSmall} = useContext(Context);
   
   return (
-    <header className="lg:bg-[#ebe3cc] lg:w-full lg:left-0 p-4 padnav bg-[#f0e4cc] border border-none">
+    <header className="lg:w-full lg:left-0 p-4 padnav bg-cream border border-none">
       <div className="container mx-auto flex gap-y-6 lg:flex-row h-full justify-around items-center relative">
         {/* logo */}
         <Link to="/" className="flex items-center"><MdPets className="mx-2"/><span className="font-bold" >Barking Lot</span></Link>

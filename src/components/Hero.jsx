@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Pets from './Pets'
 import Adoption from './Adoption'
 import Newsletter from "./Newsletter";
@@ -7,7 +7,19 @@ import { Context } from "../Context";
 import bgImage from '../img/hero/hero-bg.png'
 
 const Hero = () => {
-  const {handleYoutube} = useContext(Context)
+  const {handleYoutube} = useContext(Context);
+  const [width, setWidth] =  useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
     <section
@@ -31,7 +43,7 @@ const Hero = () => {
     </section>
     <Pets />
     <Adoption />
-    <Newsletter />
+    {(width > 1000) ? <Newsletter /> : ""}
     </>
   );
 };
