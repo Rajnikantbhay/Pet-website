@@ -1,20 +1,19 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
 import Pets from './Pets'
 import Adoption from './Adoption'
-import Footer from './Footer'
 import Newsletter from "./Newsletter";
 import { BsYoutube } from "react-icons/bs";
 import { Context } from "../Context";
+import bgImage from '../img/hero/hero-bg.png'
 
 const Hero = () => {
   const {handleYoutube} = useContext(Context)
   return (
     <>
     <section
-      className="bg-cream lg:bg-hero lg:bg-cover
+      className="bg-cream lg:bg-cover
   lg:bg-no-repeat min-h-[400px] lg:min-h-[805px]"
-    >
+  style={{ backgroundImage: `url(${bgImage})` }}>
       <div className="container mx-auto flex justify-start items-center min-h-[400px] lg:h-[805px]">
         <div className="lg:max-w-[650px] text-center mx-auto lg:text-left lg:mx-0">
           {/* image */}
@@ -33,7 +32,6 @@ const Hero = () => {
     <Pets />
     <Adoption />
     <Newsletter />
-    
     </>
   );
 };

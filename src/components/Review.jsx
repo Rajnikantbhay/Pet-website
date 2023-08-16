@@ -8,12 +8,10 @@ import img7 from '../../src/rev-img/7.webp'
 import img8 from '../../src/rev-img/8.webp'
 import img9 from '../../src/rev-img/9.webp'
 import img10 from '../../src/rev-img/10.webp'
-import { useState, useEffect, useContext } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css";import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Context } from '../Context'
 import { Fragment } from 'react'
 
 const Review = [

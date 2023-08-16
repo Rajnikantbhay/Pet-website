@@ -1,16 +1,10 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css/navigation";
 import "swiper/css";
-
-// import Service1Icon from "../../src/img/services/service-icon1.svg";
-// import Service2Icon from "../../src/img/services/service-icon2.svg";
-// import Service3Icon from "../../src/img/services/service-icon3.svg";
-
 import icon1 from '../services-icons/1.svg'
 import icon2 from '../services-icons/2.svg'
-import icon3 from '../services-icons/3.svg'
 import icon4 from '../services-icons/4.svg'
 import icon5 from '../services-icons/5.svg'
 import icon6 from '../services-icons/6.svg'
@@ -102,16 +96,12 @@ const ServiceSlider = () => {
     >
       {services.map((service) => {
         return (
-          <>
             <SwiperSlide
-              className="border border-primary/20 bg-cream min-h-[560px] rounded-[66px] py-16 px-8"
-              key={service.id}
-            >
+              className="border border-primary/20 bg-cream min-h-[560px] rounded-[66px] py-16 px-8" key={service.id}>
               <div className=" bg-yellow rounded-full w-1/4"><img className="mb-9 w-full p-5" src={service.image} /></div>
               <div className="text-[26px] font-[Arial] font-bold mb-4">{service.name}</div>
               <div className="text-[16px] font-[Arial]">{service.description}</div>
             </SwiperSlide>
-          </>
         );
       })}
     </Swiper>

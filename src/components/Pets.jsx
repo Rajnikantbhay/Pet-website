@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import petbg from '../img/pets/pets-bg.png'
 import Pet1Img from '../../src/img/pets/1.png';
 import Pet2Img from '../../src/img/pets/2.png';
 import Pet3Img from '../../src/img/pets/3.png';
@@ -102,7 +102,7 @@ const Pets = () => {
     setPetDetails(pet);
   };
   return (
-    <section className="bg-pets bg-center py-6 overflow-hidden">
+    <section className="bg-center py-6 overflow-hidden" style={{ backgroundImage: `url(${petbg})` }}>
       <div className="flex felx-col lg:flex-row">
         {/* badge */}
         <div className="hidden xl:flex xl:w-[30%] xl:pl-[160px]">
