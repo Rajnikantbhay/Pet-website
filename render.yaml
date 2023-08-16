@@ -1,0 +1,10 @@
+routes:
+  - src: /.*
+    headers:
+      - key: Access-Control-Allow-Origin
+        value: '*'
+    status: 200
+    headers:
+      - key: "Content-Type"
+        value: "text/html; charset=UTF-8"
+    dest: /index.html
